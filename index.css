@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Arial', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 0.1fr 2fr 0.1fr;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";   
+        height: 99.9vh;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    grid-area: header;
+    align-self: start;
+    justify-self: auto;
+    text-align: end;
+    padding-top: 1.5em;
+    padding-right: 2.0em;
+    font-size: 13px;
+}
+
+header li {
+    padding: 0.5em;
+}
+
+header a {
+    color: black;
+}
+
+main {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 13em;
+}
+
+main input {
+    display: grid;
+    position: relative;
+    width: 250%;
+    height: 3.5em;
+    right: 12em;
+    border-style: double;
+    border-radius: 20px;
+    padding: 4px 0px 0px 36px;
+    margin: 2em 0px 2em 0;
+    background: url(magnifyingGlass.png) no-repeat 5px;
+    background-size: 25px;
+}
+
+main input:hover{
+    box-shadow: 0px 0px 10px -4px black;
+}
+
+main button {
+    font-size: 14px;
+    color: #212326;
+    background-color: rgba(24, 22, 22, 0.1);
+    padding: 8px 10px 10px 10px;
+    border-style: solid;
+    border-radius: 5%;
+    margin-right: 0.5em;
+}
+
+main button:hover {
+    background-color:rgba(11, 11, 11, 0.05);
+    border-color: rgba(11, 11, 11, 0.05);
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.1);
+    grid-area: footer;
+    display: flex;
+    line-height: 3em;
+    font-size: 16px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+footer li {
+    padding: 1em;
+}
+
+footer a {
+    color: black;
+}
+
+#google-apps {
+    width: 1%;
+}
+#sign-in-button {
+    color: white;
+    background-color: #4285f4;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: #4285f4;
+}
